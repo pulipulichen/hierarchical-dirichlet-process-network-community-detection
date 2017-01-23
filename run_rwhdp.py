@@ -60,10 +60,10 @@ batchsize = 1 # mini-batch size
 epochs = 3 # epochs
 var_converge = 0.1
 
-network = 'yeast'
-f_net = '/home/ruimin/anaconda3/network_analysis/data/%s/%s.elst.csv'%(network, network)
-f_log = '/home/ruimin/anaconda3/network_analysis/data/%s/%s.rwhdp.log'%(network, network)
-f_out = '/home/ruimin/anaconda3/network_analysis/data/%s/%s.rwhdp.out'%(network, network)
+root_dir = ''
+f_net = '%s/data/example.csv'%root_dir
+f_log = '%s/output/example.rwhdp.log'%root_dir
+f_out = '%s/output/example.rwhdp.out'%root_dir
 f_ref = ''
 
 # load graph

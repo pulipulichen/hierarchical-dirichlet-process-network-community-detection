@@ -71,11 +71,11 @@ batchsize = 2 # number of documents per batch
 epochs = 3 # epochs
 var_converge = 0.1
 
-network = 'facebook'
-f_net = '/home/ruimin/anaconda3/network_analysis/data/%s/%s.elst.csv'%(network, network) # network file
-f_log = '/home/ruimin/anaconda3/network_analysis/data/%s/%s.online_rwhdp.log'%(network, network) # log file
-f_out = '/home/ruimin/anaconda3/network_analysis/data/%s/%s.online_rwhdp.out'%(network, network) # output file
-f_ref = '' # ground truth community structure file
+root_dir = ''
+f_net = '%s/data/example.csv'%root_dir # network file
+f_log = '%s/output/example.online_rwhdp.log'%root_dir # log file
+f_out = '%s/output/example.online_rwhdp.out'%root_dir # output file
+f_ref = '' # ground truth community structure file, empty if there is no ground information
 
 # load graph
 print('loading graph...')
