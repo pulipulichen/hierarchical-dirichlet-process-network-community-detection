@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xcolor} % define my own color
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+%\usepackage{titlesec} % set section and subsection format
+%\titleformat{\section} 
+%{\normalfont\large\bfseries}{\thesection}{1em}{}[{\titlerule[1pt]}]
+%\titlespacing*{\section}{0pt}{15pt plus 2pt minus 2pt}{5pt plus 2pt minus 2pt}
+%\titlespacing*{\subsection}{0pt}{10pt plus 2pt minus 2pt}{2pt plus 1pt minus 1pt}
+
+\setlength\parindent{0pt} % no indentation
+
+%\usepackage[dvipsnames]{xcolor} % define my own color
+%\colorlet{mycolor}{black!80!}
+
+\makeatletter
+\newcommand{\distas}[1]{\mathbin{\overset{#1}{\kern\z@\sim}}}%
+\newsavebox{\mybox}\newsavebox{\mysim}
+\newcommand{\distras}[1]{%
+	\savebox{\mybox}{\hbox{\kern3pt$\scriptstyle#1$\kern3pt}}%
+	\savebox{\mysim}{\hbox{$\sim$}}%
+	\mathbin{\overset{#1}{\kern\z@\resizebox{\wd\mybox}{\ht\mysim}{$\sim$}}}%
+}
+\makeatother
+
+\newcommand{\indep}{\rotatebox[origin=c]{90}{$\models$}}
+
+\begin{document}
+\tableofcontents
+\section{problem description}
+Network community detection.
+
+\section{methodologies}
+Randoms + Bayes Nonparametric Topic Model
+
+\subsection{random walks}
+treat vertexes as words, random walks as documents
+
+\subsection{the topic model in our method}
+\textcolor{blue}{HDP topic model}
+
+\section{related models}
+SIP2-LDA:\\
+
+BCD:
+\begin{align*}
+z\sim CRP(\alpha) & ~~~cluster assingment\\
+\eta_{lm}\sim Beta(\beta, \beta) & ~~~link probability\\
+A_{ij}\sim Bernoulli(\eta_{z_iz_j})& ~~~ link
+\end{align*}
+
+Walktrap:
+
+
+\section{stochastic variational inference}
+
+\section{experiment}
+\subsection{evaluation metrics}
+Given a subset $S$ of $V$, let $(S, S(E))$ be the subgraph induced by $S$. Let $n_S$ be the size of $S$, $m_S$ be the number of edges inside $S$, and $c_S$ be the number of edges with one end in $S$ and the other outside $S$.
+
+\begin{enumerate}
+	\item internal density: $D = \frac{2m_S}{n_S(n_S-1)}$
+	\item cut ratio: $CR = \frac{c_S}{n_S(n-n_S)}$
+	\item conductance: $C = \frac{c_S}{2m_S+c_S}$
+	\item modularity: $Q = \sum\limits_{i=1}{C}(e_{ii}-a_i^2)$, where $e_{ij}$ is the fraction of edges with one end in community $i$ and the other in community $j$, $a_i = \sum_je_{ij}$. This index falls in $[-0.5, 1)$. The larger the better. Modularity is the fraction of edges that fall within the given groups minus the expected fraction if edges were distributed at random.
+	\item perplexity: $\exp\{-\frac{\sum\limits_{d=1}^{M}\log{w_d}}{\sum\limits_{d=1}^{M}N_d}\}$, the exponential of the negative average log-likelihood or the geometric mean of $1/\log_i$. The lower the better.
+\end{enumerate}
+
+\subsection{data sets}
+Currently our method scales to network with million nodes and achieves highest performance compared to other generative models. It also outperforms other non-probabilistic based network community detection method such as \textit{Walktrap}.
+\end{document}
