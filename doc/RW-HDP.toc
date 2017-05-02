@@ -1,0 +1,19 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Review of network community detection}{3}{0}{1}
+\beamer@sectionintoc {2}{Inspirations}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{random walk + deep learning}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{SSN-LDA}{6}{0}{2}
+\beamer@sectionintoc {3}{RW-HDP}{7}{0}{3}
+\beamer@subsectionintoc {3}{1}{basic idea}{7}{0}{3}
+\beamer@subsectionintoc {3}{2}{Random walks}{8}{0}{3}
+\beamer@subsectionintoc {3}{3}{HDP topic model}{9}{0}{3}
+\beamer@subsectionintoc {3}{4}{Inference}{11}{0}{3}
+\beamer@subsectionintoc {3}{5}{Community assignment}{13}{0}{3}
+\beamer@sectionintoc {4}{Experiments}{14}{0}{4}
+\beamer@subsectionintoc {4}{1}{data sets}{14}{0}{4}
+\beamer@subsectionintoc {4}{2}{evaluation metrics}{14}{0}{4}
+\beamer@subsectionintoc {4}{3}{comparison models}{14}{0}{4}
+\beamer@subsectionintoc {4}{4}{results}{14}{0}{4}
+\beamer@subsectionintoc {4}{5}{Pros and Cons}{14}{0}{4}
+\beamer@sectionintoc {5}{Future works}{15}{0}{5}
+\beamer@sectionintoc {6}{References}{16}{0}{6}
