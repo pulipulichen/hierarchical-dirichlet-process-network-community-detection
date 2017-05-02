@@ -11,9 +11,8 @@
 \beamer@subsectionintoc {3}{5}{Community assignment}{13}{0}{3}
 \beamer@sectionintoc {4}{Experiments}{14}{0}{4}
 \beamer@subsectionintoc {4}{1}{data sets}{14}{0}{4}
-\beamer@subsectionintoc {4}{2}{evaluation metrics}{14}{0}{4}
-\beamer@subsectionintoc {4}{3}{comparison models}{14}{0}{4}
-\beamer@subsectionintoc {4}{4}{results}{14}{0}{4}
-\beamer@subsectionintoc {4}{5}{Pros and Cons}{14}{0}{4}
-\beamer@sectionintoc {5}{Future works}{15}{0}{5}
-\beamer@sectionintoc {6}{References}{16}{0}{6}
+\beamer@subsectionintoc {4}{2}{evaluation metrics}{16}{0}{4}
+\beamer@subsectionintoc {4}{3}{comparison models}{17}{0}{4}
+\beamer@subsectionintoc {4}{4}{results}{18}{0}{4}
+\beamer@subsectionintoc {4}{5}{Pros and Cons}{20}{0}{4}
+\beamer@sectionintoc {5}{Future works}{21}{0}{5}

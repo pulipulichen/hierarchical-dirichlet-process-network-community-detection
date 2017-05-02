@@ -158,7 +158,7 @@ Topic models are generative models that generally used for documents analysis.
 \subsection{SSN-LDA}
 \begin{frame}
 \frametitle{SSN-LDA}
-...
+In this model, each node is associated with a social interaction profile, which only takes a node's immediate and secondary neighbors into consideration. Those social interaction profiles are treated as documents for community detection using Latent Dirichlet Allocation.	
 \end{frame}
 
 
@@ -187,13 +187,26 @@ Conduct $D$ random walks and treat them as documents.
 
 \subsection{HDP topic model}
 \begin{frame}
-\frametitle{Stick breaking construction}
-...
+\frametitle{HDP topic model: stick breaking construction}
+\begin{enumerate}
+	\item Draw an infinite number of topics, $\beta_k\sim Dirichlet(\eta), k = 1, 2, \dots$
+	\item Draw corpus breaking proportions, $v_k\sim Beta(1, \gamma), k=1, 2, \dots$
+	\item For each document:
+	\begin{enumerate}
+		\item Draw document-level topic indexes, $c_{di}\sim Multinomial(\sigma(v)), i = 1, 2, \dots$
+		\item Draw document breaking proportions, $\pi_{di}\sim Beta(1, \alpha), i = 1, 2, \dots$
+		\item For each word:
+		\begin{enumerate}
+			\item Draw topic assignment $z_{dn}\sim Multinomial(\sigma(\pi_d))$.
+			\item Draw word $w_{dn}\sim Multinomial(\phi_{c_{d, z_{dn}}})$.
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
 \end{frame}
 
 \begin{frame}
 \frametitle{Graph representation}
-...
+There should be a picture but I don't have time.
 \end{frame}
 
 \subsection{Inference}
@@ -229,9 +242,102 @@ The latent variables $c_{di}, \pi_{di}, z_{dn}$ depends only on a single documen
 
 \section{Experiments}
 \subsection{data sets}
+\begin{frame}
+\frametitle{data sets}
+\begin{enumerate}
+	\item yeast: a yeast protein complex interaction network (Yu \textit{et al} 2008).
+	\item GSE: a breast cancer gene co-expression network (Chen \textit{et al} 2010, Chen and Xu 2005).
+	\item ca-GrQc: Arxiv General Relativity and Quantum Cosmology collaboration network. If an author $i$ co-authored a paper with author $j$, the graph contains an undirected edge between $i$ and $j$ (Leskovec \textit{et al} 2007).
+	\item ca-CondMat: Arxiv Condense Matter Physics collaboration network (Leskovec \textit{et al} 2007).
+	\item US powergrid: the high-voltage power grid in the Western States of the United States of America. The nodes are transformers, substations, and generators, and the ties are high-voltage transmission lines (Watts \textit{et al} 1998).
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{data sets}
+\begin{table}[ht]
+	\caption{Network Statistics}
+	\begin{center}
+		\begin{tabular}{l|c|c|c|c|c}
+			\hline
+			statistics & yeast & GSE & ca-GrQc & ca-CondMat & US powergrid \\
+			type & biology & biology & co-authorship & co-authorship & engineer \\
+			nodes & 1540 & 9112 & 5242 & 16264 & 4941 \\
+			edges & 8703 & 244928 & 14478 & 47594 & 6594 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\label{table:networks}
+\end{table}
+\end{frame}
+
 \subsection{evaluation metrics}
+\begin{frame}
+\frametitle{evaluation metrics}
+\begin{enumerate}
+	\item Internal density: $D=\frac{2m_S}{n_S(n_S-1)}$. This metric sores the community structure based on its internal connectivity. A larger internal density usually means a better community structure (Radicchi \textit{et al} 2004).
+	\item Cut Ratio: $CR=\frac{c_S}{n_S(n-n_S)}$, which quantifies the community structure based on its external connectivity. A smaller cut ratio usually means a better community structure (Fortunato 2010).
+	\item Conductance: $C=\frac{c_S}{2m_S+c_S}$, which measures the fraction of edge that points outside the cluster. It combines both internal and external connectivity to give a score. A smaller conductance usually means a better community structure (Shi and Malik 2000).
+	\item Modularity: $Q=\sum_{i=1}^{m}(e_{ii}-a_i^2)$, where $m$ is the number of communities, $e_{ij}$ the fraction of edges with one end in community $i$ and the other in community $j$, $a_i =\sum_je_{ij}$. This index falls in $[-0.5, 1)$. A larger modularity means a better community structure (Newman 2006). 
+\end{enumerate}
+\end{frame}
+
 \subsection{comparison models}
+\begin{frame}
+\frametitle{comparison models}
+\begin{enumerate}
+	\item SSN-LDA (Zhang \textit{et al} 2007), a topic based community detection model. 
+	\item Walktrap (Pons and Latapy 2006), a random walk based community detection model. This method does not actually implement random walks on the network, but it defines node-to-node distance and community-to-community distance based on properties of random walks, such as the transition probability between any pair of nodes within $t$ steps. Later, it merges communities iteratively to get a hierarchical tree of partition. Finally, it cuts the tree to get the best partition.
+	\item BCD (Morup and Schmidt 2012), a nonparametric Bayesian network generative model. The generative process is: first, a cluster assignment is generated using Chinese Restaurant Process (a commonly used metaphor for Dirichlet Process); then, within-cluster and between-cluster link probabilities are generated; finally, links between nodes are generated according to the within- and between-cluster link probabilities.
+\end{enumerate} 
+\end{frame}
+
 \subsection{results}
+\begin{frame}
+\frametitle{results}
+\begin{figure}[h!]
+	\centering
+	\vspace{.3in}
+	\includegraphics[scale=0.3]{metrics}
+	\vspace{.3in}
+	\caption{Boxplots of internal density, cut ratio and conductance. 1: RW-HDP, 2: SSN-LDA, 3: Walktrap, 4: BCD.}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{results}
+\begin{table}[ht]
+	\caption{Modularity}
+	\begin{center}
+		\begin{tabular}{l|c|c|c|c|c}
+			\hline
+			model & yeast & GSE & ca-GrQc & ca-CondMat & US powergrid \\
+			\hline
+			RW-HDP & 0.7605 & 0.5967 & 0.7848 & 0.7588 & 0.9087 \\
+			SIP2-LDA & 0.6995 & 0.5881 & 0.7479 & 0.6615 & 0.7775 \\
+			Walktrap & 0.6968 & 0.6014 & 0.7430 & 0.7238 & 0.8953 \\
+			BCD & 0.6452 & 0.2017 & 0.5378 & 0.5041 & 0.4802 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\label{table:modularity}
+\end{table}
+
+\begin{table}[ht]
+	\caption{Perplexity}
+	\begin{center}
+		\begin{tabular}{l|c|c|c|c|c}
+			\hline
+			model & yeast & GSE & ca-GrQc & ca-CondMat & US powergrid \\
+			\hline
+			RW-HDP & 62.26 & 1124.51 & 504.16 & 1262.18 & 235.46 \\
+			SIP2-LDA & 279.95 & 1664.80 & 2902.81 & 41920.72 & 7197.49 \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\label{table:perplexity}
+\end{table}
+\end{frame}
 \subsection{Pros and Cons}
 \begin{frame}
 \frametitle{Pros and Cons}
@@ -266,16 +372,18 @@ The latent variables $c_{di}, \pi_{di}, z_{dn}$ depends only on a single documen
 \end{enumerate}
 \end{frame}
 
-\section{References}
+\section*{References}
 \begin{frame}
 \frametitle{References}
 ...
 \end{frame}
-\end{document}
 
 \begin{frame}
 	\Huge{\centerline{Thank You}}
 \end{frame}
+\end{document}
+
+
 
 
 \begin{columns}[t] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
