@@ -1,17 +1,17 @@
-\BOOKMARK [2][]{Outline0.1}{Review\040of\040network\040community\040detection}{}% 1
+\BOOKMARK [2][]{Outline0.1}{Review of network community detection}{}% 1
 \BOOKMARK [2][]{Outline0.2}{Inspirations}{}% 2
-\BOOKMARK [3][]{Outline0.2.1.5}{random\040walk\040+\040deep\040learning}{Outline0.2}% 3
+\BOOKMARK [3][]{Outline0.2.1.5}{random walk + deep learning}{Outline0.2}% 3
 \BOOKMARK [3][]{Outline0.2.2.6}{SSN-LDA}{Outline0.2}% 4
 \BOOKMARK [2][]{Outline0.3}{RW-HDP}{}% 5
-\BOOKMARK [3][]{Outline0.3.1.7}{basic\040idea}{Outline0.3}% 6
-\BOOKMARK [3][]{Outline0.3.2.8}{Random\040walks}{Outline0.3}% 7
-\BOOKMARK [3][]{Outline0.3.3.9}{HDP\040topic\040model}{Outline0.3}% 8
+\BOOKMARK [3][]{Outline0.3.1.7}{basic idea}{Outline0.3}% 6
+\BOOKMARK [3][]{Outline0.3.2.8}{Random walks}{Outline0.3}% 7
+\BOOKMARK [3][]{Outline0.3.3.9}{HDP topic model}{Outline0.3}% 8
 \BOOKMARK [3][]{Outline0.3.4.11}{Inference}{Outline0.3}% 9
-\BOOKMARK [3][]{Outline0.3.5.13}{Community\040assignment}{Outline0.3}% 10
+\BOOKMARK [3][]{Outline0.3.5.13}{Community assignment}{Outline0.3}% 10
 \BOOKMARK [2][]{Outline0.4}{Experiments}{}% 11
-\BOOKMARK [3][]{Outline0.4.1.14}{data\040sets}{Outline0.4}% 12
-\BOOKMARK [3][]{Outline0.4.2.16}{evaluation\040metrics}{Outline0.4}% 13
-\BOOKMARK [3][]{Outline0.4.3.17}{comparison\040models}{Outline0.4}% 14
+\BOOKMARK [3][]{Outline0.4.1.14}{data sets}{Outline0.4}% 12
+\BOOKMARK [3][]{Outline0.4.2.16}{evaluation metrics}{Outline0.4}% 13
+\BOOKMARK [3][]{Outline0.4.3.17}{comparison models}{Outline0.4}% 14
 \BOOKMARK [3][]{Outline0.4.4.18}{results}{Outline0.4}% 15
-\BOOKMARK [3][]{Outline0.4.5.20}{Pros\040and\040Cons}{Outline0.4}% 16
-\BOOKMARK [2][]{Outline0.5}{Future\040works}{}% 17
+\BOOKMARK [3][]{Outline0.4.5.20}{Pros and Cons}{Outline0.4}% 16
+\BOOKMARK [2][]{Outline0.5}{Future works}{}% 17

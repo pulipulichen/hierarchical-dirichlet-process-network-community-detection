@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2016.6.16)  2 MAY 2017 18:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.8)  3 MAY 2017 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -28,7 +28,7 @@ Package: beamerbasedecode 2010/05/01 (rcs-revision efa082c6111d)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is not detected.
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 \headheight=\dimen102
 \headdp=\dimen103
@@ -122,18 +122,19 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: xetex.def on input line 95.
+Package graphics Info: Driver file: pdftex.def on input line 95.
 
-(/usr/share/texlive/texmf-dist/tex/xelatex/xetex-def/xetex.def
-File: xetex.def 2015/09/11 v4.06 LaTeX color/graphics driver for XeTeX (TeX Liv
-e/RRM/JK)
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)))
+)
+\Gread@gobject=\count105
+))
 \Gin@req@height=\dimen127
 \Gin@req@width=\dimen128
 )
@@ -174,29 +175,24 @@ ex
 \pgf@yc=\dimen138
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count105
-\c@pgf@countb=\count106
-\c@pgf@countc=\count107
-\c@pgf@countd=\count108
+\c@pgf@counta=\count106
+\c@pgf@countb=\count107
+\c@pgf@countc=\count108
+\c@pgf@countd=\count109
 \t@pgf@toka=\toks20
 \t@pgf@tokb=\toks21
 \t@pgf@tokc=\toks22
  (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Driver file for pgf: pgfsys-xetex.def
+Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.def
-File: pgfsys-xetex.def 2014/07/09  (rcs-revision 1.11)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx.def
-File: pgfsys-dvipdfmx.def 2014/07/09  (rcs-revision 1.14)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
 f
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
-)
-\pgfsys@objnum=\count109
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
@@ -213,8 +209,9 @@ Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package xcolor Info: Driver file: xetex.def on input line 225.
+Package xcolor Info: Driver file: pdftex.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
 Package xcolor Info: Model `RGB' extended on input line 1353.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
@@ -382,10 +379,9 @@ Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode not found.
+Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
 Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
 )
@@ -457,37 +453,18 @@ Package hyperref Message: Stopped early.
 
 )
 
-Package hyperref Message: Driver (autodetected): hxetex.
+Package hyperref Message: Driver (autodetected): hpdftex.
 
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hxetex.def
-File: hxetex.def 2012/11/06 v6.83m Hyperref driver for XeTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2012/11/06 v6.83m Hyperref: PDF Unicode definition (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/stringenc.sty
-Package: stringenc 2011/12/02 v1.10 Convert strings between diff. encodings (HO
-)
-)
-\pdfm@box=\box40
-\c@Hy@AnnotLevel=\count124
-\HyField@AnnotCount=\count125
-\Fld@listcount=\count126
-\c@bookmark@seq@number=\count127
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count124
+\c@bookmark@seq@number=\count125
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
-Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
-(rerunfilecheck)             (e.g. pdfTeX or LuaTeX with package `pdftexcmds').
-
-(rerunfilecheck)             Therefore file contents cannot be checked efficien
-tly
-(rerunfilecheck)             and the loading of the package is aborted.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
 ))
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
-File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
-
-)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaserequires.sty
 Package: beamerbaserequires 2010/05/01  (rcs-revision efa082c6111d)
 
@@ -530,37 +507,37 @@ Package: beamerbasetwoscreens 2010/05/01  (rcs-revision efa082c6111d)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseoverlay.sty
 Package: beamerbaseoverlay 2013/12/25  (rcs-revision f6bd5e3805da)
-\beamer@argscount=\count128
+\beamer@argscount=\count126
 \beamer@lastskipcover=\skip44
-\beamer@trivlistdepth=\count129
+\beamer@trivlistdepth=\count127
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetitle.sty
 Package: beamerbasetitle 2010/09/21  (rcs-revision f0446ed0b6ae)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasesection.sty
 Package: beamerbasesection 2013/06/07  (rcs-revision 60b9fe0f342f)
-\c@lecture=\count130
-\c@part=\count131
-\c@section=\count132
-\c@subsection=\count133
-\c@subsubsection=\count134
+\c@lecture=\count128
+\c@part=\count129
+\c@section=\count130
+\c@subsection=\count131
+\c@subsubsection=\count132
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframe.sty
 Package: beamerbaseframe 2014/02/20  (rcs-revision 4b8ceeeff434)
-\beamer@framebox=\box41
-\beamer@frametitlebox=\box42
-\beamer@zoombox=\box43
-\beamer@zoomcount=\count135
-\beamer@zoomframecount=\count136
+\beamer@framebox=\box40
+\beamer@frametitlebox=\box41
+\beamer@zoombox=\box42
+\beamer@zoomcount=\count133
+\beamer@zoomframecount=\count134
 \beamer@frametextheight=\dimen168
-\c@subsectionslide=\count137
+\c@subsectionslide=\count135
 \beamer@frametopskip=\skip45
 \beamer@framebottomskip=\skip46
 \beamer@frametopskipautobreak=\skip47
 \beamer@framebottomskipautobreak=\skip48
 \beamer@envbody=\toks27
 \framewidth=\dimen169
-\c@framenumber=\count138
+\c@framenumber=\count136
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseverbatim.sty
 Package: beamerbaseverbatim 2015/01/05  (rcs-revision 431510bb5890)
@@ -568,22 +545,22 @@ Package: beamerbaseverbatim 2015/01/05  (rcs-revision 431510bb5890)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframesize.sty
 Package: beamerbaseframesize 2011/09/12  (rcs-revision 70f9d8411e54)
-\beamer@splitbox=\box44
-\beamer@autobreakcount=\count139
+\beamer@splitbox=\box43
+\beamer@autobreakcount=\count137
 \beamer@autobreaklastheight=\dimen170
 \beamer@frametitletoks=\toks28
 \beamer@framesubtitletoks=\toks29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseframecomponents.sty
 Package: beamerbaseframecomponents 2013/10/18  (rcs-revision 5cf6c5555a45)
-\beamer@footins=\box45
+\beamer@footins=\box44
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasecolor.sty
 Package: beamerbasecolor 2015/02/21  (rcs-revision d944b04ee2d5)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasenotes.sty
 Package: beamerbasenotes 2012/12/19  (rcs-revision 1686da3db3c9)
-\beamer@frameboxcopy=\box46
+\beamer@frameboxcopy=\box45
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasetoc.sty
 Package: beamerbasetoc 2015/03/08  (rcs-revision 7270298bbaae)
@@ -597,11 +574,11 @@ Package: beamerbaseauxtemplates 2014/06/30  (rcs-revision 580088513a67)
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbaseboxes.sty
 Package: beamerbaseboxes 2012/05/13  (rcs-revision 56972908a390)
-\bmb@box=\box47
-\bmb@colorbox=\box48
-\bmb@boxshadow=\box49
-\bmb@boxshadowball=\box50
-\bmb@boxshadowballlarge=\box51
+\bmb@box=\box46
+\bmb@colorbox=\box47
+\bmb@boxshadow=\box48
+\bmb@boxshadowball=\box49
+\bmb@boxshadowballlarge=\box50
 \bmb@temp=\dimen171
 \bmb@dima=\dimen172
 \bmb@dimb=\dimen173
@@ -616,8 +593,8 @@ Package: beamerbaselocalstructure 2014/09/10  (rcs-revision 393f6dcff371)
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks31
 )
-\c@figure=\count140
-\c@table=\count141
+\c@figure=\count138
+\c@table=\count139
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 )
@@ -648,30 +625,30 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count142
+\inf@bad=\count140
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count143
-\leftroot@=\count144
+\uproot@=\count141
+\leftroot@=\count142
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count145
-\DOTSCASE@=\count146
+\classnum@=\count143
+\DOTSCASE@=\count144
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
-\Mathstrutbox@=\box52
-\strutbox@=\box53
+\Mathstrutbox@=\box51
+\strutbox@=\box52
 \big@size=\dimen179
 LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
-\macc@depth=\count147
-\c@MaxMatrixCols=\count148
+\macc@depth=\count145
+\c@MaxMatrixCols=\count146
 \dotsspace@=\muskip11
-\c@parentequation=\count149
-\dspbrk@lvl=\count150
+\c@parentequation=\count147
+\dspbrk@lvl=\count148
 \tag@help=\toks33
-\row@=\count151
-\column@=\count152
-\maxfields@=\count153
+\row@=\count149
+\column@=\count150
+\maxfields@=\count151
 \andhelp@=\toks34
 \eqnshift@=\dimen180
 \alignsep@=\dimen181
@@ -698,7 +675,7 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headsep=\skip56
 \dth@everypar=\toks42
 )
-\c@theorem=\count154
+\c@theorem=\count152
 )
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasethemes.sty
 Package: beamerbasethemes 2010/05/01  (rcs-revision efa082c6111d)
@@ -756,12 +733,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen195
 \cmidrulekern=\dimen196
 \defaultaddspace=\dimen197
-\@cmidla=\count155
-\@cmidlb=\count156
+\@cmidla=\count153
+\@cmidlb=\count154
 \@aboverulesep=\dimen198
 \@belowrulesep=\dimen199
-\@thisruleclass=\count157
-\@lastruleclass=\count158
+\@thisruleclass=\count155
+\@lastruleclass=\count156
 \@thisrulewidth=\dimen256
 )
 (./RW-HDP.aux)
@@ -781,13 +758,11 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
 LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: xetex
+*geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
-* driver: xetex
+* driver: pdftex
 * paper: custom
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -818,6 +793,34 @@ LaTeX Font Info:    ... okay on input line 98.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count157
+\scratchdimen=\dimen257
+\scratchbox=\box53
+\nofMPsegments=\count158
+\nofMParguments=\count159
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count160
+\MPscratchDim=\dimen258
+\MPnumerator=\count161
+\makeMPintoPDFobject=\count162
+\everyMPtoPDFconversion=\toks44
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box54
 Package hyperref Info: Link coloring OFF on input line 98.
@@ -828,7 +831,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count159
+\c@section@level=\count163
 )
 LaTeX Info: Redefining \ref on input line 98.
 LaTeX Info: Redefining \pageref on input line 98.
@@ -923,17 +926,22 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 
 [1
 
-] (./RW-HDP.toc) [2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./RW-HDP.toc) [2
 
-] [3
+]
+[3
 
 ] [4
 
-]
-File: deepwalk.png Graphic file (type QTm)
- <use  "deepwalk.png" > [5
+] <deepwalk.png, id=233, 475.7775pt x 178.6675pt>
+File: deepwalk.png Graphic file (type png)
+ <use deepwalk.png>
+Package pdftex.def Info: deepwalk.png used on input line 156.
+(pdftex.def)             Requested size: 190.30762pt x 71.46573pt.
 
-] [6
+[5
+
+ <./deepwalk.png>] [6
 
 ] [7
 
@@ -970,7 +978,7 @@ thkerncmss.
 ] [14
 
 ]
-Overfull \hbox (19.53027pt too wide) in paragraph at lines 272--272
+Overfull \hbox (19.53027pt too wide) in paragraph at lines 274--274
  [] 
  []
 
@@ -979,20 +987,23 @@ Overfull \hbox (19.53027pt too wide) in paragraph at lines 272--272
 ] [16
 
 ]
-Overfull \vbox (8.25868pt too high) detected at line 293
+Overfull \vbox (8.25868pt too high) detected at line 295
  []
 
 [17
 
-]
-File: metrics.png Graphic file (type QTm)
- <use  "metrics.png" >
-Overfull \vbox (43.37177pt too high) detected at line 305
+] <metrics.png, id=581, 433.62pt x 590.4459pt>
+File: metrics.png Graphic file (type png)
+ <use metrics.png>
+Package pdftex.def Info: metrics.png used on input line 307.
+(pdftex.def)             Requested size: 130.087pt x 177.13513pt.
+
+Overfull \vbox (43.37141pt too high) detected at line 307
  []
 
 [18
 
-] [19
+ <./metrics.png>] [19
 
 ] [20
 
@@ -1012,25 +1023,47 @@ Overfull \vbox (43.37177pt too high) detected at line 305
 \tf@snm=\write8
 \openout8 = `RW-HDP.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 384.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 384.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 386.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 386.
  (./RW-HDP.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 384.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 384.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 386.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 386.
+Package rerunfilecheck Info: File `RW-HDP.out' has not changed.
+(rerunfilecheck)             Checksum: 179F38E5EEACECC99D1ADD128AD0B617;1020.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 384.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 386.
  ) 
 Here is how much of TeX's memory you used:
- 20085 strings out of 493638
- 367216 string characters out of 6146796
- 435736 words of memory out of 5000000
- 23068 multiletter control sequences out of 15000+600000
- 17210 words of font info for 62 fonts, out of 8000000 for 9000
- 1328 hyphenation exceptions out of 8191
- 56i,16n,62p,492b,795s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 17132 strings out of 493029
+ 329938 string characters out of 6136235
+ 396830 words of memory out of 5000000
+ 20186 multiletter control sequences out of 15000+600000
+ 16850 words of font info for 61 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 56i,16n,62p,492b,801s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mssi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on RW-HDP.pdf (23 pages, 286664 bytes).
+PDF statistics:
+ 814 PDF objects out of 1000 (max. 8388607)
+ 750 compressed objects within 8 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 219 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on RW-HDP.pdf (23 pages).

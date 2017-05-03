@@ -206,7 +206,7 @@ Conduct $D$ random walks and treat them as documents.
 
 \begin{frame}
 \frametitle{Graph representation}
-There should be a picture but I don't have time.
+There should be a picture.
 \end{frame}
 
 \subsection{Inference}
@@ -237,7 +237,9 @@ The latent variables $c_{di}, \pi_{di}, z_{dn}$ depends only on a single documen
 \subsection{Community assignment}
 \begin{frame}
 \frametitle{Bayes theorem for community assignment}
-...
+$$
+p(c|v) \propto p(c)p(v|c) = \sigma_c(v)\beta_{zv}
+$$
 \end{frame}
 
 \section{Experiments}
